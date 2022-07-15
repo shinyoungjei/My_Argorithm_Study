@@ -1,4 +1,4 @@
-package No_Seven;
+package AlgoStudy;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -24,21 +24,21 @@ public class BOJ_3273_두수의합 {
 
 		// 수열의 합
 		int X = Integer.parseInt(br.readLine());
-		
+
 		// 정렬
 		Arrays.sort(arr);
-		
+
 		// 결과 값
 		int cnt = 0;
-		
+
 		// idx값
 		int start = 0;
 		int end = N-1;
-		
+
 		while(true) {
 			// 종료 조건
 			if(start >= end) break;
-			
+
 			if(arr[start] + arr[end] == X) {
 				start++;
 				end--;
@@ -50,7 +50,7 @@ public class BOJ_3273_두수의합 {
 			}else { // ( arr[start]+arr[end] < X ) 
 				start++;
 			}
-			
+
 		}
 		System.out.println(cnt);
 	}
